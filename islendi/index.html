@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İŞLENDİ</title>
+    <style>
+        :root {
+            --stamp-red: #cc3333;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            font-family: serif;
+        }
+
+        .stamp-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .islendi-stamp {
+            border: clamp(4px, 1.5vw, 12px) solid var(--stamp-red);
+            padding: clamp(1rem, 4vw, 3rem) clamp(2rem, 8vw, 6rem);
+            color: var(--stamp-red);
+            font-size: clamp(3rem, 15vw, 10rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+            line-height: 1;
+            user-select: none;
+            /* Subtle stamp characteristics */
+            border-radius: 4px;
+            opacity: 0.95;
+            position: relative;
+        }
+
+        /* Responsive text scaling */
+        @media screen and (max-width: 600px) {
+            .islendi-stamp {
+                letter-spacing: 0.05em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stamp-container">
+        <div class="islendi-stamp">
+            İŞLENDİ
+        </div>
+    </div>
+</body>
+</html>
